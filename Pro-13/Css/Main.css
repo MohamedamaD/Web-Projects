@@ -1,0 +1,590 @@
+/* Start Globla Rules */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    outline: none;
+}
+
+:root{
+    --mainColor: #f7600e;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.overLay{
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(0 0 0 / .5);
+    z-index: 1;
+}
+
+.btn{
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px #FFF solid;
+    padding: 10px;
+    width: 150px;
+    margin: 0 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.btn:hover{
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+.btn.hover-active{
+    background-color: var(--mainColor); 
+    border-color: var(--mainColor);
+}
+
+.btn.hover-active:hover{
+    background-color: transparent;
+    border-color: #FFF;
+}
+
+.frameTitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.frameTitle h3.titleOfSection{
+    font-weight: normal;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.frameTitle h3.titleOfSection span{
+    color: var(--mainColor);
+}
+
+.frameTitle p {
+    line-height: 1.8;
+    color: #444;
+    font-size: 14px;
+}
+
+.SID{
+    cursor: no-drop;
+    opacity: .5;
+}
+
+::selection{
+    transition: 0.3s;
+    background-color: var(--mainColor);
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Globla Rules */
+
+/* Start Header */
+
+header{
+    position: relative;
+    background: url(../Photo/headerBack.jpg) center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+header nav ul{
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+    z-index: 2;
+}
+
+header nav ul h3{
+    float: left;
+}
+
+header nav ul h3 span{
+    color: var(--mainColor);
+}
+
+header nav ul li,
+header nav ul i{
+    float: right;
+}
+
+header nav ul i{
+    font-size: x-large;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+header .contentSec{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+header .contentSec h3{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+header .contentSec h3 span{
+    color: var(--mainColor);
+    text-transform: uppercase;
+}
+
+header .contentSec p{
+    color: #eee;
+    line-height: 1.6;
+    font: 16px;
+    margin-bottom: 30px;
+}
+
+header i.downIcon{
+    position: absolute;
+    bottom: 10px;left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    padding: 13px 10px;
+    width: 50px;
+    border: 2px solid #FFF;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* End Header */
+
+/* Start Features */
+
+section#features{
+    padding: 60px 0;
+}
+
+section#features .Box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#features .Box .boxItem{
+    width: 23.5%;
+    margin-right: 1.5%;
+    text-align: center;
+}
+
+section#features .Box .boxItem i{
+    color: var(--mainColor);
+    width: 80px;height: 80px;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    border-radius: 50%;
+    line-height: 80px;
+    border: 1px solid #dedede;
+    transition: 0.3s ease-in-out;
+}
+
+section#features .Box .boxItem i:hover{
+    background-color: var(--mainColor);
+    color: #FFF;
+}
+
+section#features .Box .boxItem h3{
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+section#features .Box .boxItem p{
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Edit flexBox in Screen 767px */
+@media (max-width: 767px) {
+    section#features .Box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    section#features .Box .boxItem{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+}
+/* End Features */
+
+/* Start Subscribe */
+
+section#Subscribe{
+    padding: 60px 0;
+    background: url(../Photo/backgroundSub.jpg) center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+section#Subscribe form{
+    position: relative;
+    z-index: 2;
+    user-select: none;
+    text-align: center;
+}
+
+section#Subscribe form input{
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 15px 8px 15px 0;
+}
+
+section#Subscribe form input[type='email']{
+    border: 1px #eee solid;
+    background-color: transparent;
+    width: 220px;
+    padding-left: 20px;
+}
+
+section#Subscribe form input[type='email']::placeholder{
+    color: var(--mainColor);
+}
+
+/* End Subscribe */
+
+/* Start ourWork  */
+
+section#ourWork{
+    padding: 60px 0;
+    text-align: center;
+}
+
+section#ourWork .contentofSection .Box{
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+section#ourWork .contentofSection .Box .imageBox{
+    position: relative;
+    float: left;
+    width: calc((100% / 3) - 1%);
+    margin-right: 1%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+section#ourWork .contentofSection .Box .imageBox .over{
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(247 96 14 / 0.8);
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+section#ourWork .contentofSection .Box .imageBox .over h3{
+    text-transform: uppercase;
+    font-size: x-large;
+    margin-bottom: 8px;
+}
+
+section#ourWork .contentofSection .Box .imageBox .over p{
+    line-height: 1.25;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+section#ourWork .contentofSection .Box .imageBox .over button:hover{
+    background-color: #FFF;
+    color: var(--mainColor);
+}
+
+section#ourWork .contentofSection .Box .imageBox.hidden{
+    display: none;
+}
+
+section#ourWork .contentofSection .Box .imageBox img{
+    display: block;
+    width: 100%;
+}
+
+section#ourWork .contentofSection button.showMore:hover{
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+}
+
+.postionContent{
+    position: relative;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Edit Screen 992px */
+@media (max-Width: 992px) {
+    section#ourWork .contentofSection .Box .imageBox{
+        width: 49%;
+    }
+}
+
+/* Edit Screen 767px */
+@media (max-Width: 767px) {
+    section#ourWork .contentofSection .Box .imageBox{
+        width: 100%;
+    }
+}
+/* End ourWork  */
+
+/* Start Testimonials */
+
+section#Testimonials{
+    padding: 60px 0;
+    position: relative;
+    background: url(../Photo/backgroundTesti.jpg) no-repeat center fixed;
+    background-size: cover;
+    text-align: center
+}
+
+section#Testimonials .Box{
+    position: relative;
+    z-index: 2;
+}
+
+section#Testimonials .Box .boxItem{
+    display: none;
+}
+
+section#Testimonials .Box .boxItem.Active{
+    display: block;
+}
+
+section#Testimonials .Box img{
+    width: 100px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+section#Testimonials .Box p{
+    line-height: 1.8;
+    font-weight: 200;
+    font-size: larger;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+section#Testimonials .Box h4{
+    font-weight: 500;
+    font-size: 14px;
+    color: #298bd0;
+}
+
+section#Testimonials i{
+    position: absolute;
+    top: 50%;transform: translateY(-50%);
+    font-size: larger;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+section#Testimonials i:first-child{
+    left: 20px;
+}
+
+section#Testimonials i:last-child{
+    right: 20px;
+}
+
+section#Testimonials i:hover{
+    color: var(--mainColor);
+}
+
+/* End Testimonials */
+
+/* Start ourTeam */
+
+section#ourTeam{
+    padding: 60px 0;
+    position: relative;
+}
+
+section#ourTeam .Box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 40px 15px;
+    text-align: center;
+}
+
+section#ourTeam .boxItem{
+    filter: grayscale(1);
+    transition: 0.3s ease-in-out;
+}
+
+section#ourTeam .boxItem:hover{
+    filter: grayscale(0);
+}
+
+section#ourTeam .boxItem img{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+section#ourTeam .boxItem h3{
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+section#ourTeam .boxItem i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+section#ourTeam .boxItem i:nth-of-type(1){
+    background-color: #0097e6;
+}
+
+section#ourTeam .boxItem i:nth-of-type(2){
+    background-color: #192a56;
+}
+
+section#ourTeam .boxItem i:nth-of-type(3){
+    background-color: #c23616;
+}
+
+section#ourTeam .boxItem p{
+    color: #444;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* End ourTeam */
+
+/* Start Contact */
+
+section#Contact{
+    padding: 60px 0;
+    position: relative;
+    background: url(../Photo/contact.jpg) center fixed no-repeat;
+    background-size: cover;
+}
+
+section#Contact .Box{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+section#Contact .frameTitle h3.titleOfSection,
+section#Contact .frameTitle p{
+    color: #FFF;
+}
+
+section#Contact input:not(:last-of-type),
+section#Contact textarea{
+    background-color: #FFF;
+    color: #000;
+    border: 1px #444 solid ;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+section#Contact textarea{
+    height: 200px;
+    width: 99%;
+}
+
+section#Contact input:not(:last-of-type){
+    float: left;
+    width: 49%;
+    margin-right: 1%;
+
+}
+
+section#Contact i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center;
+    float: right;
+}
+
+section#Contact i:nth-of-type(1){
+    background-color: #0097e6;
+}
+
+section#Contact i:nth-of-type(2){
+    background-color: #192a56;
+}
+
+section#Contact i:nth-of-type(3){
+    background-color: #c23616;
+}
+
+/* End Contact */
+
+/* Start footer */
+
+footer{
+    padding: 20px;
+    background-color: #0e1934;
+}
+
+footer span{
+    color: var(--mainColor);
+}
+
+/* End footer */

@@ -1,0 +1,215 @@
+/*
+    font-family: 'Grey Qo', cursive;
+    font-family: 'Open Sans', sans-serif;
+*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    height: 3000px;
+    text-transform: capitalize;
+}
+
+html{scroll-behavior: smooth;}
+
+:root{
+    --mainColor: #247cff;
+}
+
+/* Start Header */
+
+#header .hrColor{
+    height: 3px;
+    background-color: var(--mainColor);
+}
+
+.navbar-light .navbar-brand{
+    color: var(--mainColor);
+    margin: 0 10px;
+}
+
+header .nav-item{padding: 0 1.5rem;}
+
+.custom-link{
+    text-decoration: none;
+    padding: 0.5rem 1.4rem;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+
+.custom-link ~ span{
+    float: left;
+    padding: 0.5rem 0;
+}
+
+.custom-link::after{
+    content: 'learn more';
+    position: absolute;
+    left: 50%;bottom: -100%;
+    transform: translateX(-50%);
+    width: 100%;height: 100%;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    padding: 0.5rem 1.4rem;
+    background-color: #eee;
+}
+
+.custom-link:hover:after{bottom: 0;}
+
+@media (max-width: 991px) {
+    header .Box{
+        position: relative !important;
+        width: 100% !important;
+        margin-bottom: 60px;
+    }
+}
+
+/* End Header */
+
+/* Start Sections timeLine */
+
+#timeLine .timeline-icon{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    z-index: 2;
+    background-color: #FFF;
+}
+
+#timeLine .timeline-icon::after{
+    content: '';
+    position: absolute;
+    left: 50%;top: 80px;
+    transform: translateX(-50%);
+    width: 2px;height: 100%;
+    background-color: #eee;
+}
+
+#timeLine .textBoxOne::before,
+#timeLine .textBoxTwo::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;height: 0;
+    border: 10px solid transparent;
+}
+
+#timeLine .textBoxTwo::before{
+    border-right-color: #212529;
+    left: -20px;
+}
+
+#timeLine .textBoxOne::before{
+    border-left-color: #212529;
+    right: -20px;
+}
+
+#timeLine .row:last-child .iconBoxTimeLine{
+    overflow: hidden;
+}
+
+@media (max-width: 766px) {
+    
+    #timeLine .textBoxOne::before{
+        border-right-color: #212529;
+        border-left-color: transparent;
+        right: unset;left: -20px;
+    }
+
+    #timeLine .timeline-icon{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    #timeLine .timeline-icon::after{
+        top: 50px;
+        height: calc(100% + 50px);
+    }
+
+    #timeLine .iconBoxTimeLine{
+        padding: 0;
+    }
+}
+
+/* End Sections timeLine */
+
+/* Start Sections Testimonials */
+
+section#testimonials{
+    overflow: hidden;
+}
+
+section#testimonials .slider-container{
+    display: inline-flex;
+    transform: translateX(0);
+    cursor: grab;
+    user-select: none;
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+}
+
+section#testimonials .slider-container .slide{
+    width: 100vw;
+    padding: 2rem;
+}
+
+section#testimonials .icons-container i{
+    cursor: pointer;
+}
+.grabbing{
+    cursor: grabbing !important;
+}
+
+section#testimonials .slider-container .slide.active{
+    background-color: #000;
+}
+
+section#testimonials .slider-container .slide.active i{
+    color: #FFF;
+}
+
+section#testimonials .slider-container .slide.active p{
+    color: #FFF;
+}
+/* End Sections Testimonials */
+
+/* Start Sections Booking */
+
+section#booking input,
+section#booking textarea{
+    border: transparent;
+    border-bottom: #ced4da 1px solid;
+}
+
+section#booking input[type="submit"]{
+    width: 200px;
+    border-radius: 0;
+    padding: 12px;
+}
+
+section#booking input[type="submit"]:hover{background-color: var(--mainColor);
+}
+
+/* End Sections Booking */
+
+/* Start Sections Contact */
+
+section#contact{
+    background: url(../Photo/back01.svg) center no-repeat #eee;
+    background-size: 400px;
+    padding: 30px 0 !important;
+}
+
+section#contact .row{padding: 30px;}
+
+section#contact a{padding: 0 0 12px 0;}
+
+section#contact a:hover{color: var(--mainColor) !important;}
+
+section#contact .social-icon-link:hover{color: var(--mainColor) !important;}
+
+/* End Sections Contact */
